@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/Questions.css";
+import Button from "./Button";
 function Question({ allData, setScore, setCurrent }) {
   let allAnswers = [...allData.incorrect_answers, allData.correct_answer];
   const shuffleArray = (array) => {
@@ -21,27 +22,32 @@ function Question({ allData, setScore, setCurrent }) {
     }
     return false;
   };
+  const handleClick = (answer) => {
+    checkCorrect(answer);
+  };
   return (
     <div>
-      <h2>
-        Category: <p>{allData.category}</p>
-      </h2>
-      <p>Difficulty: {allData.difficulty}</p>
-      <p>
-        Question:
-        <p>{allData.question}</p>
-      </p>
+      <div className="quesDiv categDiv">
+        <p>Category: {allData.category}</p>
+      </div>
+      <div className="difDiv">
+        <p>Difficulty: {allData.difficulty}</p>
+      </div>
+
+      <div className="quesDiv">
+        <p>Question: {allData.question}</p>
+      </div>
       {allData.type === "multiple" ? (
         <div className="buttonsDiv">
-          <button onClick={() => checkCorrect(randArr[0])}>{randArr[0]}</button>
-          <button onClick={() => checkCorrect(randArr[1])}>{randArr[1]}</button>
-          <button onClick={() => checkCorrect(randArr[2])}>{randArr[2]}</button>
-          <button onClick={() => checkCorrect(randArr[3])}>{randArr[3]}</button>
+          <Button rand={randArr[0]} handleClick={handleClick} />
+          <Button rand={randArr[1]} handleClick={handleClick} />
+          <Button rand={randArr[2]} handleClick={handleClick} />
+          <Button rand={randArr[3]} handleClick={handleClick} />
         </div>
       ) : (
         <div className="buttonsDiv">
-          <button onClick={() => checkCorrect(randArr[0])}>{randArr[0]}</button>
-          <button onClick={() => checkCorrect(randArr[1])}>{randArr[1]}</button>
+          <Button rand={randArr[0]} handleClick={handleClick} />
+          <Button rand={randArr[1]} handleClick={handleClick} />
         </div>
       )}
     </div>

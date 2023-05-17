@@ -1,0 +1,58 @@
+.gameDiv > input {
+  border: none;
+  background-color: #8a65a3;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: larger;
+  width: 15rem;
+  color: white;
+}
+.gameDiv > input:focus {
+  outline: none;
+}
+.Dropdown-control {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #8a65a3;
+  color: white;
+  padding: 0;
+}
+.Dropdown-arrow {
+  top: 20px;
+  right: 10px;
+  display: none;
+}
+.numberRound {
+  position: absolute;
+  top: 6rem;
+}
+.button {
+  background-color: white;
+  border: 1px solid #ccc;
+  height: 3rem;
+  cursor: pointer;
+}
+.catP {
+  position: absolute;
+  top: 16.1rem;
+}
+.diffP {
+  position: absolute;
+  top: 11.1rem;
+}
+.gameDiv > button {
+  background-color: transparent;
+  color: white;
+}
+.gameDiv > button:hover {
+  background-color: rgba(127, 17, 190, 0.2);
+}

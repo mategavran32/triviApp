@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Question from "./Question";
-
+import "./styles/Questions.css";
 function Trivia({ data, number }) {
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -18,9 +18,9 @@ function Trivia({ data, number }) {
           <button onClick={handleNewGame}>New Game</button>
         </div>
       ) : (
-        <div>
-          <div>Score: {score}</div>
-          <div>Round: {currentQuestion}</div>
+        <div className="gameDiv">
+          <div className="scoreDiv">Score: {score}</div>
+          <div className="roundDiv">Round: {currentQuestion}</div>
           <Question
             allData={allData[currentQuestion]}
             setScore={setScore}

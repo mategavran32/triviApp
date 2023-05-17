@@ -1,20 +1,40 @@
 .buttonsDiv {
   margin-top: 5rem;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
+  width: 50rem;
 }
-.buttonsDiv > button {
-  background-color: rgb(241, 233, 233);
-  border: none;
-  border-radius: 5px;
-  box-shadow: 2px 2px 15px;
-  cursor: pointer;
-  transition: all 0.2s ease-out;
-  height: 2rem;
+.quesDiv > p {
+  color: white;
+  font-size: 1.3rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  width: 50rem;
 }
-.buttonsDiv > button:hover {
-  transform: scale(1.05);
+.difDiv {
+  position: absolute;
+  top: 9rem;
+  color: white;
+  width: 50rem;
+  font-size: 1.4rem;
+}
+.scoreDiv {
+  position: absolute;
+  top: -6rem;
+  color: white;
+}
+.roundDiv {
+  position: absolute;
+  right: 0rem;
+  top: -6rem;
+  color: white;
+}
+.triviaDiv {
+  position: relative;
+  width: 50rem;
+}
 
-  box-shadow: 5px 5px 15px;
+.categDiv > p {
+  font-size: 2.2rem;
 }
