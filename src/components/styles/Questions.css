@@ -1,0 +1,20 @@
+.buttonsDiv {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+.buttonsDiv > button {
+  background-color: rgb(241, 233, 233);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  height: 2rem;
+}
+.buttonsDiv > button:hover {
+  transform: scale(1.05);
+
+  box-shadow: 5px 5px 15px;
+}
